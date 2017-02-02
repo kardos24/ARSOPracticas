@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT libro (titulo, autor, seccion*)>
+<!ELEMENT contenido (texto|seccion+)>
+<!ELEMENT seccion (nombre, contenido?)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT texto (#PCDATA)>

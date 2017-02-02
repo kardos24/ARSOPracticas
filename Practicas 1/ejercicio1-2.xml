@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE calificaciones SYSTEM "ejercicio1-2.dtd">
+
+
+<calificaciones asignatura="Software" convocatoria="febrero" curso="3">
+	<calificacion nif="489999G" nombre="Manuel" nota="10"/>
+	<calificacion nif="410010G" nota="5"/>
+	<calificacion nif="566755G" nombre="Carlos" nota="7"/>
+	<diligencia nif="897666H" nombre="Javier" nota="8" fecha="20-2-17" extraordinaria="si"/>
+	<diligencia nif="892423H" nota="8" fecha="20-2-17" />
+	<diligencia nif="214366H" nota="8" fecha="20-2-17" extraordinaria="si"/>
+	<diligencia nif="000006H" nombre="San Apostol" nota="8" fecha="20-2-17" />
+
+</calificaciones>
