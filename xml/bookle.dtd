@@ -5,7 +5,7 @@
 <!ELEMENT descripcion (#PCDATA)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
-<!ELEMENT fecha(turno*)>
+<!ELEMENT fecha (turno*)>
 <!ELEMENT turno (reserva?)>
 <!ELEMENT reserva (nombre, email?)>
 
