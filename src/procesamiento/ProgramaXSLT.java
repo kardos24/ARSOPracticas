@@ -13,17 +13,17 @@ public class ProgramaXSLT {
 	public static void main(String[] args) {
 		TransformerFactory factoria = TransformerFactory.newInstance();
 		Transformer transformador;
-//		try {
-//			transformador = factoria.newTransformer(new StreamSource("xml/poema.xsl"));
-//
-//			Source origen = new StreamSource("xml/poema.xml");
-//			Result destino = new StreamResult("xml/poema_solucion.html");
-//
-//			transformador.transform(origen, destino);
-//		} catch (TransformerException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		try {
+			transformador = factoria.newTransformer(new StreamSource("xml/poema.xsl"));
+
+			Source origen = new StreamSource("xml/poema.xml");
+			Result destino = new StreamResult("xml/poema_solucion.html");
+
+			transformador.transform(origen, destino);
+		} catch (TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		try {
 			transformador = factoria.newTransformer(new StreamSource("xml/poema_invertido.xsl"));
