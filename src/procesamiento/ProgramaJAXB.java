@@ -17,6 +17,7 @@ public class ProgramaJAXB {
 	public static void main(String[] args) {
 
 		try {
+			System.out.println("Inicio JAXB");
 			JAXBContext contexto = JAXBContext.newInstance("calificaciones");
 			Unmarshaller unmarshaller = contexto.createUnmarshaller();
 
@@ -28,8 +29,10 @@ public class ProgramaJAXB {
 			Date dateMothAgo = calendario.getTime();
 			Long numDiligencias = calificaciones.getDiligencia().stream().map(d -> d.getFecha().toGregorianCalendar().getTime())
 					.filter(d -> dateMothAgo.before(d) && d.before(new Date())).count();
+			System.out.println("Numero de diliegencias: " + numDiligencias);
 			
 			Double notaMedia = calificaciones.getCalificacion().stream().mapToDouble(TipoCalificacion::getNota).average().getAsDouble();
+			System.out.println("Nota media de calificaciones: " + notaMedia);
 			
 			calificaciones.getCalificacion().forEach((cali)->{
 				double nota = cali.getNota();
@@ -37,6 +40,7 @@ public class ProgramaJAXB {
 				if(nota>10){
 					nota = 10;
 				}
+				System.out.println("Nota de calificaciones cambiada de " + cali.getNota() + " a " + nota);
 				cali.setNota(nota);
 			});
 			
@@ -45,6 +49,7 @@ public class ProgramaJAXB {
 			marshaller.setProperty("jaxb.schemaLocation",
 					"http://www.um.es/as Calificacioens/calificaciones.xsd");
 			marshaller.marshal(calificaciones, new File("Calificaciones/calificaciones-modificado_JAXB.xml"));
+			System.out.println("Fin JAXB");
 		} catch (JAXBException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
