@@ -15,6 +15,7 @@ import calificaciones.TipoCalificacion;
 public class ProgramaJAXB {
 
 	public static void main(String[] args) {
+		//C:\Users\Alumno\git\ARSOPracticas>"C:\Program Files (x86)\Java\jdk1.8.0_111\bin\xjc.exe" Calificaciones\calificaciones.xsd -p calificaciones
 
 		try {
 			System.out.println("Inicio JAXB");
